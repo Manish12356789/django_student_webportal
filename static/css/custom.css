@@ -1,0 +1,779 @@
+.page-logo img {
+    width: 70px;
+}
+
+.page-header.navbar .page-logo {
+    float: left;
+    display: block;
+    width: 235px;
+    height: 60px;
+    padding: 0px 20px 0px 60px;
+    background: #222c3c;
+}
+
+.container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field {
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+form .page .field .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: #222c3c;
+    margin-top: -20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+    background: #000;
+}
+
+form .page .btns button {
+    margin-top: -20px!important;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.container .progress-bar {
+    display: flex!important;
+    margin: 40px 0;
+    user-select: none;
+    background-color: transparent;
+    flex-direction: row;
+}
+
+.container .progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.container .progress-bar .step p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.progress-bar .step .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+    border-color: #337ab7;
+    background: #337ab7;
+}
+
+.progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    left: 35px;
+    height: 3px;
+    width: 160px;
+    background: black;
+}
+
+.progress-bar .step .bullet.active:after {
+    background: #337ab7;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step p.active {
+    color: #337ab7;
+    transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step .check.active {
+    display: block;
+    color: #fff;
+}
+
+.css-1pijmfn {
+    margin-bottom: 15px;
+    padding: 0px 25px;
+}
+
+.css-1tvja62 {
+    background: rgb(255, 255, 255);
+    margin: 15px auto 0px;
+    padding: 5px 15px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+@media (min-width: 425px) {
+    .css-144jyck {
+        font-size: 1.6em;
+    }
+}
+
+.css-144jyck {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 15px 0px 5px 15px;
+    width: 100%;
+    color: #606a84;
+}
+
+.css-a2ukjv {
+    font-size: 1.2em;
+    padding: 0px 0px 0px 15px;
+}
+
+.css-j1nef9 {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+}
+
+.jss80 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+}
+
+@media (min-width: 768px) {
+    .css-15x8mc5 {
+        max-width: 33%;
+        width: 33%;
+    }
+}
+
+.css-15x8mc5 {
+    display: inline-block;
+    padding: 5px 15px;
+    text-align: left;
+}
+
+.css-5ilje {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: relative;
+}
+
+.css-siu1e6 {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 0px;
+    max-width: 100%;
+}
+
+label {
+    line-height: 34px;
+}
+
+.css-sztano {
+    display: inline-block;
+    font-size: 12px;
+    margin: 5px 0px 3px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: rgb(50, 56, 71);
+}
+
+label.required:after {
+    padding-left: 2px;
+    content: "*";
+    color: red;
+}
+
+.css-5ilje {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: relative;
+}
+
+.MuiTextField-root {
+    display: inline-flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.MuiFormControl-fullWidth {
+    width: 100%;
+}
+
+.MuiFormControl-root {
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: top;
+}
+
+.css-hybktf .MuiOutlinedInput-root {
+    height: 39px;
+    top: -2px;
+}
+
+.MuiOutlinedInput-adornedEnd {
+    padding-right: 14px;
+}
+
+.MuiOutlinedInput-root {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.MuiInputBase-fullWidth {
+    width: 100%;
+}
+
+.MuiInputBase-root {
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    height: 40px;
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+}
+
+.css-hybktf input {
+    height: 36px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+}
+
+.MuiOutlinedInput-inputAdornedEnd {
+    padding-right: 0;
+}
+
+.MuiOutlinedInput-input {
+    padding: 18.5px 14px;
+}
+
+.MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 8px 16px;
+    font-size: 16px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    font-family: Open Sans;
+    font-weight: 400;
+    line-height: 24px;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+.css-5ilje {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: relative;
+}
+
+.css-1ou4m0j {
+    -webkit-box-align: center;
+    align-items: center;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid rgb(204, 204, 204);
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 0px;
+}
+
+.css-1vqpu3y.text-input input,
+.css-1vqpu3y.score-input input {
+    box-shadow: none;
+}
+
+.css-1dkbfrn {
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    height: 34px;
+    margin: 0px;
+    padding: 6px;
+    width: 100%;
+    border: 0px !important;
+}
+
+.css-1vqpu3y.text-input input,
+.css-1vqpu3y.score-input input {
+    box-shadow: none;
+}
+
+.css-1dkbfrn {
+    background-color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    height: 34px;
+    margin: 0px;
+    padding: 6px;
+    width: 100%;
+    border: 0px !important;
+}
+
+.css-smrlr9 .Select {
+    width: 100%;
+}
+
+.css-smrlr9 .Select-control {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+.Select,
+.Select div,
+.Select input,
+.Select span {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Select,
+.Select div,
+.Select input,
+.Select span {
+    box-sizing: border-box;
+}
+
+.Select-control {
+    background-color: #fff;
+    border-color: #d9d9d9 #ccc #b3b3b3;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: default;
+    display: table;
+    border-spacing: 0;
+    border-collapse: separate;
+    height: 36px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.Select,
+.Select div,
+.Select input,
+.Select span {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Select,
+.Select div,
+.Select input,
+.Select span {
+    box-sizing: border-box;
+}
+
+.Select-placeholder,
+.Select--single>.Select-control .Select-value {
+    bottom: 0;
+    color: #aaa;
+    left: 0;
+    line-height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Select--single>.Select-control .Select-value,
+.Select-placeholder {
+    bottom: 0;
+    color: #aaa;
+    left: 0;
+    line-height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Select-arrow-zone {
+    cursor: pointer;
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 25px;
+    padding-right: 5px;
+}
+
+.Select-control>*:last-child {
+    padding-right: 5px;
+}
+
+.Select-input>input {
+    width: 100%;
+    background: none transparent;
+    border: 0 none;
+    box-shadow: none;
+    cursor: default;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    outline: none;
+    line-height: 17px;
+    padding: 8px 0 12px;
+    -webkit-appearance: none;
+}
+
+
+/*----------------------------Profile-----------------------*/
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1500px!important;
+    }
+}
+
+.Edu-summary {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #deebfd;
+    box-shadow: -8px 12px 18px 0 #dadee8;
+    padding: 2px 25px 20px 25px;
+}
+
+.Back-summary {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #deebfd;
+    box-shadow: -8px 12px 18px 0 #dadee8;
+    padding: 2px 25px 20px 25px;
+}
+
+.school-attend {
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #deebfd;
+    box-shadow: -8px 12px 18px 0 #dadee8;
+    padding: 5px 25px 30px 25px;
+}
+
+.profile-page {
+    padding: 25px 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #deebfd;
+    box-shadow: -8px 12px 18px 0 #dadee8;
+}
+
+.profile-page .title-heading h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 0px 0px 5px 0px;
+    width: 100%;
+    color: #606a84;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.Edu-summary .title-heading h3 {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    color: #606a84;
+    margin: 5px 0px 5px 0px;
+}
+
+.Back-summary .title-heading h3 {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    color: #606a84;
+    margin: 5px 0px 5px 0px;
+}
+
+.school-attend .title-heading h3 {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    color: #606a84;
+    margin: 5px 0px 5px 0px;
+}
+
+.title-heading h4 {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    color: #606a84;
+    margin: 5px 0px 5px 0px;
+}
+
+.profile-page .title-heading2 h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    width: 100%;
+    color: #606a84;
+    margin-bottom: 2px;
+}
+
+.profile-page .sub-heading h4 {
+    font-size: 1.2em;
+    margin-top: 2px;
+}
+
+.profile-page label {
+    display: inline-block;
+    font-size: 12px;
+    margin: 15px 0px 5px;
+    font-weight: 600!important;
+    line-height: 1.5;
+    color: rgb(50, 56, 71);
+}
+
+.Edu-summary label {
+    display: inline-block;
+    font-size: 12px;
+    margin: 15px 0px 5px;
+    font-weight: 600!important;
+    line-height: 1.5;
+    color: rgb(50, 56, 71);
+}
+
+.school-attend label {
+    display: inline-block;
+    font-size: 12px;
+    margin: 20px 0px 5px;
+    font-weight: 600!important;
+    line-height: 1.5;
+    color: rgb(50, 56, 71);
+}
+
+.Back-summary label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600!important;
+    line-height: 1.5;
+    color: rgb(50, 56, 71);
+}
+
+.school-attend .form-check .ch {
+    font-weight: 700;
+}
+
+.school-attend .form-check-inline {
+    display: table-cell;
+    margin-right: 1rem;
+}
+
+.Back-summary .form-check-inline {
+    display: table-cell;
+    margin-right: 1rem;
+}
+
+.form-control {
+    border-radius: 3px!important;
+}
+
+.input-group-text {
+    height: 40px;
+}
+
+.profile-page .form-check-inline {
+    display: table-cell;
+    margin-right: 2rem;
+}
+
+.form-check span {
+    padding-right: 10px;
+}
+
+.school-attend .form-check span {
+    padding-left: 10px;
+}
+
+.form-switch .form-check-input {
+    width: 3em;
+    height: 20px;
+    padding-left: 5px;
+    margin-left: -2.5em;
+    background-position: left center;
+    border-radius: 2em;
+    transition: background-position .15s ease-in-out;
+}
+
+.logo-indigo .page-header.navbar .page-logo {
+    background: #222c3c!important;
+}
+
+.page-content-wrapper {
+    background-color: #222c3c;
+}
+
+.white-sidebar-color .user-panel,
+.white-sidebar-color .txtOnline,
+.white-sidebar-color .sidemenu-container .sidemenu>li>a,
+.white-sidebar-color .sidemenu-closed.sidemenu-container-fixed .sidemenu-container:hover .sidemenu>li>a {
+    color: rgb(152, 166, 186)!important;
+}

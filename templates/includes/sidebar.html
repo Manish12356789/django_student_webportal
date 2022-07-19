@@ -1,0 +1,64 @@
+{% url 'all_students' as all_students %}
+{% url 'add_student' as add_student %}
+{% url 'index' as index %}
+
+{% load static %}
+<!-- start sidebar menu -->
+<div class="sidebar-container">
+    <div class="sidemenu-container navbar-collapse collapse fixed-menu">
+        <div id="remove-scroll" class="left-sidemenu">
+            <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+                <li class="sidebar-toggler-wrapper hide">
+                    <div class="sidebar-toggler">
+                        <span></span>
+        </div>
+        </li>
+        <li class="sidebar-user-panel">
+            <div class="sidebar-user">
+                <div class="sidebar-user-picture">
+                    <img alt="image" src="{% static '/img/dp.jpg' %}">
+                </div>
+                <div class="sidebar-user-details">
+                    <div class="user-name">{{ request.user.first_name }} {{ request.user.last_name }}</div>
+                    <div class="user-role">
+                        {% if request.user.is_superuser == 1 %}
+                            <p>Administrator</p>
+                        {% elif request.user.is_staff == 1 %}
+                            <p>Admin</p>
+                        {% else %}
+                            <p>User</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item start {% if request.path == index %} active open {%endif%}">
+            <a href="{{index}}" class="nav-link nav-toggle">
+                <i data-feather="airplay"></i>
+                <span class="title">Dashboard</span>
+                <span class="selected"></span>
+                <span class="arrow open"></span>
+            </a>
+        </li>
+        <li class="nav-item {% if request.path == all_students %} active open {%endif%} {% if request.path == add_student %} active open {%endif%}">
+            <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                            <span class="title">Students</span><span class="arrow"></span></a>
+            <ul class="sub-menu">
+                <li class="nav-item {% if request.path == all_students %} active open {%endif%}">
+                    <a href="{{all_students}}" class="nav-link "> <span class="title">All
+                                        Students</span>
+                    </a>
+                </li>
+                <li class="nav-item {% if request.path == add_student %} active open {%endif%}">
+                    <a href="{{add_student}}" class="nav-link "> <span class="title">Add
+                                        Student</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        </ul>
+    </div>
+</div>
+</div>
+<!-- end sidebar menu -->

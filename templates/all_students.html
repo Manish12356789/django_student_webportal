@@ -1,0 +1,99 @@
+{% extends "layouts/index.html" %}
+{% block title %} ALl Students {% endblock %}
+{% block content %}
+{% load static %}
+
+<div class="page-content">
+    <div class="page-bar">
+        <div class="page-title-breadcrumb">
+            <div class=" pull-left">
+                <div class="page-title">All Students List</div>
+            </div>
+            <ol class="breadcrumb page-breadcrumb pull-right">
+                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{% url 'index' %}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                </li>
+                <li><a class="parent-item" href="#">Students</a>&nbsp;<i class="fa fa-angle-right"></i>
+                </li>
+                <li class="active">All Students List</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tabbable-line">
+               
+                <div class="tab-content">
+                    <div class="tab-pane active fontawesome-demo">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-box">
+                                    <div class="card-head">
+                                        <header>All Students List</header>
+                                        <div class="tools">
+                                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                            <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-6">
+                                                <div class="btn-group">
+                                                    <a href="{% url 'add_student' %}" id="addRow" class="btn btn-primary">
+                                                            Add New <i class="fa fa-plus"></i>
+                                                        </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table class="table table-striped table-bordered table-hover table-checkable order-column valign-middle" id="example4">
+                                            <thead>
+                                                <tr>
+                                                    <th> # </th>
+                                                    <th> First Name </th>
+                                                    <th> Last Name </th>
+                                                    <th> Email </th>
+                                                    <th> Gender </th>
+                                                    <th>Created Date</th>
+                                                    <th> Action </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% if students %}
+                                                {% for item in students %} 
+                                                <tr class="odd gradeX">
+                                                    <th class="left">{{item.id}}</th>
+                                                    <td class="left">{{item.s_fname}}</td>
+                                                    <td class="left">{{item.s_lname}}</td>
+                                                    <td><a href="mailto:{{item.s_email}}">
+                                                        {{item.s_email}} </a></td>
+                                                    <td class="left">{{item.s_gender}}</td>
+                                                    <td class="left">{{item.created_on|date:'d F Y'}}</td>
+                                                    <td>
+                                                        <a href="student-edit/{{item.slug}}" class="tblEditBtn">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                        <a href="student-delete/{{item.slug}}" class="tblDelBtn">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                                {% else %}
+                                                <tr class="odd gradeX">
+                                                    <td class="center text-danger"> There is no Students. </td>
+                                                </tr>
+                                                {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
